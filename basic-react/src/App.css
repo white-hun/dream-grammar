@@ -4,7 +4,6 @@
   border-radius: 100%;
 }
 .profile {
-  position: relative;
   width: 300px;
   margin: 1rem;
   text-align: center;
@@ -15,14 +14,20 @@
   -webkit-box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.5);
 }
+.avatar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
 .state {
   position: absolute;
   top: 10%;
-  right: 18%;
+  right: -5%;
   font-size: 16px;
   font-weight: 600;
   background-color: dodgerblue;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
 }
