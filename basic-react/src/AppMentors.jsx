@@ -11,7 +11,7 @@ export default function AppMentors() {
       },
       {
         name: "Bob",
-        title: "Senior Developer",
+        title: "Full Stack Developer",
       },
     ],
   });
@@ -20,7 +20,7 @@ export default function AppMentors() {
       <h1>
         {person.name} is {person.title}
       </h1>
-      <p>{person.name}'s is:</p>
+      <p>{person.name}'s mentoris:</p>
       <ul>
         {person.mentors.map((mentor, index) => (
           <li key={index}>
@@ -34,14 +34,12 @@ export default function AppMentors() {
           const current = prompt(`What do you want to change your name to?`);
           setPerson((prev) => ({
             ...prev,
-            mentors: [
-              ...(prev.mentors.name === { name: previous }
-                ? { name: current }
-                : ""),
-            ],
+            mentors: prev.mentors.map((mentor) => {
+              return mentor.name === previous
+                ? { ...mentor, name: current }
+                : mentor;
+            }),
           }));
-          console.log(previous);
-          console.log(current);
         }}
       >
         Change the Mentor Name
