@@ -74,6 +74,7 @@ export default function AppMentors() {
             mentors: prev.mentors.map((mentor) => {
               return mentor.name === DeleteMentorName
                 ? prev.mentors.splice(
+                    // splice(지울 위치, 지울 갯수, 새롭게 넣을 값)
                     prev.mentors.indexOf(mentor.name === DeleteMentorName),
                     1
                   )
