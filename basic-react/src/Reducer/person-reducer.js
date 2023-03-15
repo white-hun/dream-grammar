@@ -1,4 +1,7 @@
+// (useState set함수의 값(or객체), 실행하려는 동작)
+// 기존의 객체(set함수) 의 행동에 따라 새로은 set함수의 객체를 만들어서 return 해주는 함수
 export default function personReducer(person, action) {
+  // action의 type별로 동작()
   switch (action.type) {
     case "updated": {
       // const previous = action.previous;
@@ -29,6 +32,7 @@ export default function personReducer(person, action) {
         ),
       };
     }
+    // 설정하지 않은 action이라면 error
     default: {
       throw Error(`알 수 없는 액션 타입: ${action.type}`);
     }
