@@ -239,49 +239,26 @@
 // };
 //---practice---------------------------------------------------
 
-import React, { useState } from "react";
+import React, { useReducer } from "react";
+import personReducer from "./Reducer/person-reducer";
 
 export default function AppMentors() {
-  const [person, setPerson] = useState(initialPerson);
+  const [person, dispatch] = useReducer(personReducer, initialPerson);
   const changeClick = () => {
-    const previousMentorName = prompt(`Whose name do you want to change?`);
-    const currentMentorName = prompt(
-      `What do you want to change your name to?`
-    );
-    setPerson((prev) => ({
-      ...prev,
-      mentors: prev.mentors.map((mentor) => {
-        return mentor.name === previousMentorName
-          ? { ...mentor, name: currentMentorName }
-          : mentor;
-      }),
-    }));
+    const previous = prompt(`Whose name do you want to change?`);
+    const current = prompt(`What do you want to change your name to?`);
+    dispatch({ type: "updated", previous, current });
   };
   const AddClick = () => {
-    const AddMentorName = prompt(
-      `Write the name of the mentor you want to add.`
-    );
-    const AddMentorTitle = prompt(
-      `Write the title of the mentor you want to add.`
-    );
-    setPerson((prev) => ({
-      ...prev,
-      mentors: [
-        ...prev.mentors,
-        { name: AddMentorName, title: AddMentorTitle },
-      ],
-    }));
+    const name = prompt(`Write the name of the mentor you want to add.`);
+    const title = prompt(`Write the title of the mentor you want to add.`);
+    dispatch({ type: "added", name, title });
   };
   const deleteClick = () => {
     const deleteMentor = prompt(
       `Write the name of the mentor you want to delete`
     );
-    setPerson((prev) => ({
-      ...prev,
-      mentors: prev.mentors.filter((mentor) => {
-        return mentor.name !== deleteMentor;
-      }),
-    }));
+    dispatch({ type: "delete", deleteMentor });
   };
   return (
     <div>
