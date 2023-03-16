@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Products from "./components/Products";
+import TestProducts from "./components/TestProduct.";
 
 export default function AppProducts() {
   const [showProducts, setShowProducts] = useState(true);
@@ -8,7 +8,7 @@ export default function AppProducts() {
   //   console.log(showProducts);
   return (
     <div>
-      {showProducts && <Products />}
+      {showProducts && <TestProducts />}
       <button onClick={showClick}>Toggle</button>
     </div>
   );

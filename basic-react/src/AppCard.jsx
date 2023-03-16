@@ -12,6 +12,7 @@ export default function AppCard() {
         <p>Card2</p>
         <p>설명</p>
       </Card>
+
       <Card>
         <article></article>
       </Card>

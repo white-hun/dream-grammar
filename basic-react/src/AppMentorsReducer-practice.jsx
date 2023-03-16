@@ -8,7 +8,7 @@ export default function AppMentorsReducer() {
     const current = prompt(`What do you want to change your name to?`);
     dispatch({ type: "updated", previous, current });
   };
-  const AddClick = () => {
+  const addClick = () => {
     const name = prompt(`Write the name of the mentor you want to add.`);
     const title = prompt(`Write the title of the mentor you want to add.`);
     dispatch({ type: "added", name, title });
@@ -31,7 +31,7 @@ export default function AppMentorsReducer() {
         ))}
       </ul>
       <button onClick={changeClick}>Change the Mentor Name</button>
-      <button onClick={AddClick}>Add the Mentor</button>
+      <button onClick={addClick}>Add the Mentor</button>
       <button onClick={deleteClick}>Delete the Mentor</button>
     </div>
   );

@@ -1,23 +1,26 @@
-import React, { useReducer } from "react";
+import React, { useCallback, useReducer } from "react";
+import { Button } from "./components/Button";
 import personReducer from "./Reducer/person-reducer";
 
-export default function AppMentors() {
-  // dispatch를 이용해서 원하는 action을 명령, (작성한 로직 함수 와, 초기값)
+export default function AppUseCallback() {
+  // useCallback 업데이트 될 때 한번만 렌더링
   const [person, dispatch] = useReducer(personReducer, initialPerson);
-  const changeClick = () => {
+  const handleUpdate = useCallback(() => {
     const previous = prompt(`Whose name do you want to change?`);
     const current = prompt(`What do you want to change your name to?`);
     dispatch({ type: "updated", previous, current });
-  };
-  const AddClick = () => {
+  }, []);
+
+  const handleAdd = useCallback(() => {
     const name = prompt(`Write the name of the mentor you want to add.`);
     const title = prompt(`Write the title of the mentor you want to add.`);
     dispatch({ type: "added", name, title });
-  };
-  const deleteClick = () => {
+  }, []);
+
+  const handleDelete = useCallback(() => {
     const deleteMentor = prompt(`Write the name of the mentor you want to delete`);
     dispatch({ type: "deleted", deleteMentor });
-  };
+  }, []);
   return (
     <div>
       <h1>
@@ -31,9 +34,9 @@ export default function AppMentors() {
           </li>
         ))}
       </ul>
-      <button onClick={changeClick}>Change the Mentor Name</button>
-      <button onClick={AddClick}>Add the Mentor</button>
-      <button onClick={deleteClick}>Delete the Mentor</button>
+      <Button text="Change the Mentor Name" onClick={handleUpdate} />
+      <Button text="ADD the Mentor" onClick={handleAdd} />
+      <Button text="Delete the Mentor" onClick={handleDelete} />
     </div>
   );
 }

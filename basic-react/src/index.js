@@ -7,20 +7,24 @@ import "./AppXY.css";
 // import App from "./App";
 // import AppProfile from "./AppProfile";
 // import AppCounter from "./AppCounter";
-// import AppProducts from "./AppProducts";
 // import AppXY from "./AppXY";
 // import AppMentor from "./AppMentor";
+// import AppMentorsReducer from "./AppMentorsReducer";
+// import AppMentorsButton from "./AppMentorsReducer";
 // import AppMentors from "./AppMentors";
-// import AppMentorsImmer from "./AppMentorsImmer";
+// import AppMentorsImmer from "./AppMentorsButton";
 // import Appfrom from "./Appfrom";
 // import AppWrap from "./AppWrap";
 // import AppCard from "./AppCard";
-import AppTheme from "./AppTheme";
+// import AppTheme from "./AppTheme";
+// import AppUseCallback from "./AppUseCallback";
+// import AppProducts from "./basic/AppProducts";
+import AppClass from "./AppClass";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppTheme />
+    <AppClass />
   </React.StrictMode>
 );
 
