@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./AppXY.css";
+
 // import App from "./App";
 // import AppProfile from "./AppProfile";
 // import AppCounter from "./AppCounter";
@@ -11,12 +12,15 @@ import "./AppXY.css";
 // import AppMentor from "./AppMentor";
 // import AppMentors from "./AppMentors";
 // import AppMentorsImmer from "./AppMentorsImmer";
-import Appfrom from "./Appfrom";
+// import Appfrom from "./Appfrom";
+// import AppWrap from "./AppWrap";
+// import AppCard from "./AppCard";
+import AppTheme from "./AppTheme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Appfrom />
+    <AppTheme />
   </React.StrictMode>
 );
 
