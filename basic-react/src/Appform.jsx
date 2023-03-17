@@ -27,7 +27,7 @@
 
 import React, { useState } from "react";
 
-export default function Appfrom() {
+export default function Appform() {
   const [form, setForm] = useState({ name: "", email: "" });
   const handleSubmit = (e) => {
     e.preventDefault();

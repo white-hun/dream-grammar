@@ -13,18 +13,18 @@ import "./AppXY.css";
 // import AppMentorsButton from "./AppMentorsReducer";
 // import AppMentors from "./AppMentors";
 // import AppMentorsImmer from "./AppMentorsButton";
-// import Appfrom from "./Appfrom";
+// import Appform from "./Appform";
 // import AppWrap from "./AppWrap";
 // import AppCard from "./AppCard";
-// import AppTheme from "./AppTheme";
+import AppTheme from "./AppTheme";
 // import AppUseCallback from "./AppUseCallback";
 // import AppProducts from "./basic/AppProducts";
-import AppClass from "./AppClass";
+// import AppClass from "./AppClass";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppClass />
+    <AppTheme />
   </React.StrictMode>
 );
 
