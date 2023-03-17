@@ -16,15 +16,16 @@ import "./AppXY.css";
 // import Appform from "./Appform";
 // import AppWrap from "./AppWrap";
 // import AppCard from "./AppCard";
-import AppTheme from "./AppTheme";
+// import AppTheme from "./AppTheme";
 // import AppUseCallback from "./AppUseCallback";
 // import AppProducts from "./basic/AppProducts";
 // import AppClass from "./AppClass";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppTheme />
+    <App />
   </React.StrictMode>
 );
 
