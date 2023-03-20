@@ -13,7 +13,7 @@ import "./AppXY.css";
 // import AppMentorsButton from "./AppMentorsReducer";
 // import AppMentors from "./AppMentors";
 // import AppMentorsImmer from "./AppMentorsButton";
-// import Appform from "./Appform";
+import Appform from "./Appform";
 // import AppWrap from "./AppWrap";
 // import AppCard from "./AppCard";
 // import AppTheme from "./AppTheme";
@@ -25,7 +25,7 @@ import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Appform />
   </React.StrictMode>
 );
 
