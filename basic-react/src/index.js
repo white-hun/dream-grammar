@@ -20,12 +20,13 @@ import "./AppXY.css";
 // import AppUseCallback from "./AppUseCallback";
 // import AppProducts from "./basic/AppProducts";
 // import AppClass from "./AppClass";
-import App from "./App";
+// import App from "./App";
+import AppTheme from "./AppTheme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppTheme />
   </React.StrictMode>
 );
 
