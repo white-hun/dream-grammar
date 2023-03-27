@@ -13,7 +13,7 @@ import "./AppXY.css";
 // import AppMentorsButton from "./AppMentorsReducer";
 // import AppMentors from "./AppMentors";
 // import AppMentorsImmer from "./AppMentorsButton";
-// import Appform from "./Appform";
+import Appform from "./Appform";
 // import AppWrap from "./AppWrap";
 // import AppCard from "./AppCard";
 // import AppTheme from "./AppTheme";
@@ -21,12 +21,11 @@ import "./AppXY.css";
 // import AppProducts from "./basic/AppProducts";
 // import AppClass from "./AppClass";
 // import App from "./App";
-import AppTheme from "./AppTheme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppTheme />
+    <Appform />
   </React.StrictMode>
 );
 
