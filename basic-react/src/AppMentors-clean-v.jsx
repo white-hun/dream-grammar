@@ -21,9 +21,7 @@ export default function AppMentors() {
     }));
   };
   const hanbleDelete = () => {
-    const deleteMentor = prompt(
-      `Write the name of the mentor you want to delete.`
-    );
+    const deleteMentor = prompt(`Write the name of the mentor you want to delete.`);
     setPerson((prev) => ({
       ...prev,
       mentors: prev.mentors.filter((mentor) => mentor.name !== deleteMentor),
